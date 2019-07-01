@@ -8,3 +8,6 @@ publish:
 
 lint:
 	npx eslint .
+
+even:
+	sudo npx babel-node src/bin/brain-even.js
