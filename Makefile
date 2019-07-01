@@ -4,7 +4,7 @@ start:
 	sudo npx babel-node src/bin/brain-games.js
 
 publish:
-	npm publish
+	npm publish --dry-run
 
 lint:
 	npx eslint .
@@ -20,3 +20,6 @@ gcd:
 
 progress:
 	sudo npx babel-node src/bin/brain-progression.js
+
+prime:
+	sudo npx babel-node src/bin/brain-prime.js
