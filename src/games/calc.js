@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import engine from '../bin/brain-games';
+import engine from '..';
 
 const rules = 'What is the result of the expression?';
 

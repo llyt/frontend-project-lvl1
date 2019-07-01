@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import engine from '../bin/brain-games';
+import engine from '..';
 
 const rules = 'Answer "yes" if number even otherwise answer "no".';
 
