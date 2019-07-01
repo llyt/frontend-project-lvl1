@@ -10,3 +10,7 @@
 ## Calc
 
 [![asciicast](https://asciinema.org/a/bHWkKDAKqtap9WTqFmhRzstsl.svg)](https://asciinema.org/a/bHWkKDAKqtap9WTqFmhRzstsl)
+
+## Gcd
+
+[![asciicast](https://asciinema.org/a/hFjsafoVewX50WT1Axsj45kOw.svg)](https://asciinema.org/a/hFjsafoVewX50WT1Axsj45kOw)

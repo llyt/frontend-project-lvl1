@@ -14,3 +14,6 @@ even:
 
 calc:
 	sudo npx babel-node src/bin/brain-calc.js
+
+gcd:
+	sudo npx babel-node src/bin/brain-gcd.js
