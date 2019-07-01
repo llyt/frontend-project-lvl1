@@ -11,3 +11,6 @@ lint:
 
 even:
 	sudo npx babel-node src/bin/brain-even.js
+
+calc:
+	sudo npx babel-node src/bin/brain-calc.js
