@@ -1,7 +1,12 @@
 {
   "name": "llyt-brain-games",
-  "version": "0.9.7",
+  "version": "1.0.0",
   "description": "This's an education project on Hexlet platform",
+  "keywords": [
+    "llyt",
+    "brain-games",
+    "hexlet"
+  ],
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",

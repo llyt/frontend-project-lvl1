@@ -1,6 +1,6 @@
 import { gcd } from 'mathjs';
 import { cons } from '@hexlet/pairs';
-import engine from '../bin/brain-games';
+import engine from '..';
 
 const rules = 'Find the greatest common divisor of given numbers.';
 
