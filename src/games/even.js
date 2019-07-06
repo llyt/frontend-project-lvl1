@@ -1,15 +1,15 @@
 import { cons } from '@hexlet/pairs';
 import engine from '..';
+import genRandInt from '../randomInt';
 
-const rules = 'Answer "yes" if number even otherwise answer "no".';
+const description = 'Answer "yes" if number even otherwise answer "no".';
 
-const genRandInt = max => Math.floor(Math.random() * Math.floor(max));
-const getRightAnswer = num => (num % 2 === 0 ? 'yes' : 'no');
+const isEven = num => (num % 2 === 0 ? true : '');
 
-const genQA = () => {
-  const question = genRandInt(100);
-  const answer = getRightAnswer(question);
+const genQuestionAsnwer = () => {
+  const question = genRandInt(1, 100);
+  const answer = isEven(question) ? 'yes' : 'no';
   return cons(question, answer);
 };
 
-export default () => engine(rules, genQA);
+export default () => engine(description, genQuestionAsnwer, 3);

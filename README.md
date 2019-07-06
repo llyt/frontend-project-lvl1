@@ -1,35 +1,22 @@
 # frontend-project-lvl1
 [![Maintainability](https://api.codeclimate.com/v1/badges/784f1c572917c8599641/maintainability)](https://codeclimate.com/github/llyt/frontend-project-lvl1/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/784f1c572917c8599641/test_coverage)](https://codeclimate.com/github/llyt/frontend-project-lvl1/test_coverage)
 [![Build Status](https://travis-ci.org/llyt/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/llyt/frontend-project-lvl1)
-
-
-## Install
-
-```sh
-$ npm install llyt-brain-games -g
-```
 
 ## Start
 
-[![asciicast](https://asciinema.org/a/c5Nwv4BpRw3v95A1xtmxoxOwI.svg)](https://asciinema.org/a/c5Nwv4BpRw3v95A1xtmxoxOwI)
-
+[![asciicast](https://asciinema.org/a/nMm0gbVK14XfBJts5GPuVdNIj.svg)](https://asciinema.org/a/nMm0gbVK14XfBJts5GPuVdNIj)
 ## Even
 
-[![asciicast](https://asciinema.org/a/C4p7NhLNTUBchgLhJDGtQu1U0.svg)](https://asciinema.org/a/C4p7NhLNTUBchgLhJDGtQu1U0)
-
+[![asciicast](https://asciinema.org/a/QkjSvYM69RxMCTQbrgLiwmyeL.svg)](https://asciinema.org/a/QkjSvYM69RxMCTQbrgLiwmyeL)
 ## Calc
 
-[![asciicast](https://asciinema.org/a/vKWN7BWUcrdRb1697lvmNBc8d.svg)](https://asciinema.org/a/vKWN7BWUcrdRb1697lvmNBc8d)
-
+[![asciicast](https://asciinema.org/a/vzRTr2CV7CVxBxnyT0a8DLf3r.svg)](https://asciinema.org/a/vzRTr2CV7CVxBxnyT0a8DLf3r)
 ## Gcd
 
-[![asciicast](https://asciinema.org/a/03lVnzncdXwxSikpQXKAEznjJ.svg)](https://asciinema.org/a/03lVnzncdXwxSikpQXKAEznjJ)
-
+[![asciicast](https://asciinema.org/a/tYuwcadpBNDM2muwzeQYoha1G.svg)](https://asciinema.org/a/tYuwcadpBNDM2muwzeQYoha1G)
 ## Progress
 
-[![asciicast](https://asciinema.org/a/bTDirBiaWj9TsE7ALYM69AnrP.svg)](https://asciinema.org/a/bTDirBiaWj9TsE7ALYM69AnrP)
-
+[![asciicast](https://asciinema.org/a/yWhOWn99Nejaf88cUIQbR8qbf.svg)](https://asciinema.org/a/yWhOWn99Nejaf88cUIQbR8qbf)
 ## Prime
 
-[![asciicast](https://asciinema.org/a/6TSUsoDTW14mDoekLAjLDS5q4.svg)](https://asciinema.org/a/6TSUsoDTW14mDoekLAjLDS5q4)
+[![asciicast](https://asciinema.org/a/iSIOpPsUlXLh1SRSAPR7duBJH.svg)](https://asciinema.org/a/iSIOpPsUlXLh1SRSAPR7duBJH)

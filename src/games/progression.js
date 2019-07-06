@@ -1,12 +1,13 @@
 import { cons } from '@hexlet/pairs';
 import engine from '..';
+import genRandInt from '../randomInt';
 
-const rules = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 let misNum;
 
-const randNum = max => Math.floor(Math.random() * Math.floor(max));
-const genProgress = (qnt, startNum) => {
-  const posMisNum = randNum(qnt); // generate position of missing number
+const genProgress = (startNum, qnt) => {
+  const posMisNum = genRandInt(0, qnt); // generate position of missing number
+  const increaser = genRandInt(1, 10);
   let progress = `${startNum}`;
   let prevNum = startNum;
   let nextNum;
@@ -14,20 +15,20 @@ const genProgress = (qnt, startNum) => {
   for (let i = 0; i < qnt; i += 1) {
     if (i === posMisNum) {
       nextNum = '..';
-      misNum = prevNum + 3;
+      misNum = prevNum + increaser;
     } else {
-      nextNum = prevNum + 3;
+      nextNum = prevNum + increaser;
     }
-    progress += ` ${nextNum}`;
-    prevNum += 3;
+    progress = `${progress} ${nextNum}`;
+    prevNum += increaser;
   }
   return progress;
 };
 
-const genQA = () => {
-  const question = genProgress(12, 5);
+const genQuestionAsnwer = () => {
+  const question = genProgress(genRandInt(1, 100), 12);
   const answer = String(misNum);
   return cons(question, answer);
 };
 
-export default () => engine(rules, genQA);
+export default () => engine(description, genQuestionAsnwer, 3);

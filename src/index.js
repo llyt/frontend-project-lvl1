@@ -1,32 +1,27 @@
 import { car, cdr } from '@hexlet/pairs';
 import readlineSync from 'readline-sync';
 
-export default (rules = null, func = null, attempts = 3) => {
+export default (description, func, numOfAttempts) => {
   console.log('Welcome to the Brain Games!');
-  if (rules === null) {
-    console.log('');
-  } else {
-    console.log(`${rules}\n`);
+  if (description !== undefined) {
+    console.log(description);
   }
-  const userName = readlineSync.question('May I have your name? '); // Ask a name
-  console.log(`Hello, ${userName}!\n`); // Greeting
-  if (rules !== '' && func !== null) {
-    let result = `Congratulations, ${userName}!`;
+  const userName = readlineSync.question('\nMay I have your name? ');
+  console.log(`Hello, ${userName}!\n`);
 
-    for (let i = 0; i < attempts; i += 1) {
+  if (func !== undefined) {
+    for (let i = 0; i < numOfAttempts; i += 1) {
       const QA = func();
       const question = car(QA);
       const trueAnswer = cdr(QA);
       const userAnswer = readlineSync.question(`Question: ${question} `);
       console.log(`Your answer: ${userAnswer}`);
-      if (userAnswer === trueAnswer) {
-        console.log('Correct!');
-      } else {
-        result = `Answer "${userAnswer}" is wrong answer ;(. Correct answer was "${trueAnswer}"\nLet's try again, ${userName}!`;
-        break;
+      if (userAnswer !== trueAnswer) {
+        return console.log(`Answer "${userAnswer}" is wrong answer ;(. Correct answer was "${trueAnswer}"\nLet's try again, ${userName}!`);
       }
+      console.log('Correct!');
     }
-    return console.log(result);
+    console.log(`Congratulations, ${userName}!`);
   }
   return null;
 };

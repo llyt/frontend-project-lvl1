@@ -4,7 +4,7 @@ start:
 	sudo npx babel-node src/bin/brain-games.js
 
 publish:
-	npm publis
+	npm publish --dry-run
 
 lint:
 	npx eslint .
