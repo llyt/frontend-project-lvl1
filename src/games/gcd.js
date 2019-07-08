@@ -4,7 +4,7 @@ import genRandInt from '../randomInt';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const gcd = (number1, number2) => {
+const getGcd = (number1, number2) => {
   let x = number1;
   let y = number2;
   while (y) {
@@ -15,12 +15,12 @@ const gcd = (number1, number2) => {
   return x;
 };
 
-const genQuestionAsnwer = () => {
+const generateQuestionAnswer = () => {
   const num1 = genRandInt(1, 100);
   const num2 = genRandInt(1, 100);
   const question = `${num1} ${num2}`;
-  const answer = String(gcd(num1, num2));
+  const answer = getGcd(num1, num2);
   return cons(question, answer);
 };
 
-export default () => engine(description, genQuestionAsnwer, 3);
+export default () => engine(description, generateQuestionAnswer);

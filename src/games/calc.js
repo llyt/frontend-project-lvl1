@@ -6,18 +6,10 @@ const description = 'What is the result of the expression?';
 
 const genRandOperation = () => {
   const operations = '+-*/';
-  const num = Math.random();
-  if (num < 0.25) {
-    return operations[0];
-  } if (num > 0.25 && num < 0.5) {
-    return operations[1];
-  } if (num > 0.5 && num < 0.75) {
-    return operations[2];
-  }
-  return operations[3];
+  return operations[genRandInt(0, operations.length - 1)];
 };
 
-const genQuestionAsnwer = () => {
+const generateQuestionAnswer = () => {
   const num1 = genRandInt(20, 50);
   const num2 = genRandInt(1, 10);
   const operation = genRandOperation();
@@ -25,16 +17,16 @@ const genQuestionAsnwer = () => {
   let answer;
   switch (operation) {
     case '+':
-      answer = String(num1 + num2);
+      answer = num1 + num2;
       break;
     case '-':
-      answer = String(num1 - num2);
+      answer = num1 - num2;
       break;
     case '*':
-      answer = String(num1 * num2);
+      answer = num1 * num2;
       break;
     case '/':
-      answer = String(num1 / num2);
+      answer = num1 / num2;
       break;
     default:
       answer = null;
@@ -42,4 +34,4 @@ const genQuestionAsnwer = () => {
   return cons(question, answer);
 };
 
-export default () => engine(description, genQuestionAsnwer, 3);
+export default () => engine(description, generateQuestionAnswer);

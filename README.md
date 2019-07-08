@@ -2,9 +2,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/784f1c572917c8599641/maintainability)](https://codeclimate.com/github/llyt/frontend-project-lvl1/maintainability)
 [![Build Status](https://travis-ci.org/llyt/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/llyt/frontend-project-lvl1)
 
-## Start
-
-[![asciicast](https://asciinema.org/a/nMm0gbVK14XfBJts5GPuVdNIj.svg)](https://asciinema.org/a/nMm0gbVK14XfBJts5GPuVdNIj)
 ## Even
 
 [![asciicast](https://asciinema.org/a/QkjSvYM69RxMCTQbrgLiwmyeL.svg)](https://asciinema.org/a/QkjSvYM69RxMCTQbrgLiwmyeL)

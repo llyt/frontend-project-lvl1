@@ -3,32 +3,28 @@ import engine from '..';
 import genRandInt from '../randomInt';
 
 const description = 'What number is missing in the progression?';
-let misNum;
+
+let missingNumber;
 
 const genProgress = (startNum, qnt) => {
-  const posMisNum = genRandInt(0, qnt); // generate position of missing number
-  const increaser = genRandInt(1, 10);
-  let progress = `${startNum}`;
-  let prevNum = startNum;
-  let nextNum;
-
+  const diff = genRandInt(1, 10);
+  const positionOfMissingNumber = genRandInt(0, qnt - 1);
+  let result = '';
   for (let i = 0; i < qnt; i += 1) {
-    if (i === posMisNum) {
-      nextNum = '..';
-      misNum = prevNum + increaser;
-    } else {
-      nextNum = prevNum + increaser;
+    let nextSymbol = startNum + diff * i;
+    if (i === positionOfMissingNumber) {
+      missingNumber = nextSymbol;
+      nextSymbol = '..';
     }
-    progress = `${progress} ${nextNum}`;
-    prevNum += increaser;
+    result = `${result} ${nextSymbol}`;
   }
-  return progress;
+  return result;
 };
 
-const genQuestionAsnwer = () => {
+const generateQuestionAnswer = () => {
   const question = genProgress(genRandInt(1, 100), 12);
-  const answer = String(misNum);
+  const answer = missingNumber;
   return cons(question, answer);
 };
 
-export default () => engine(description, genQuestionAsnwer, 3);
+export default () => engine(description, generateQuestionAnswer);
