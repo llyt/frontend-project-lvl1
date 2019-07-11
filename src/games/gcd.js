@@ -20,7 +20,7 @@ const generateQuestionAnswer = () => {
   const num2 = genRandInt(1, 100);
   const question = `${num1} ${num2}`;
   const answer = getGcd(num1, num2);
-  return cons(question, answer);
+  return cons(question, String(answer));
 };
 
 export default () => engine(description, generateQuestionAnswer);

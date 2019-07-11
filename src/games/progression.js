@@ -1,30 +1,32 @@
-import { cons } from '@hexlet/pairs';
+import { cons, car, cdr } from '@hexlet/pairs';
 import engine from '..';
 import genRandInt from '../randomInt';
 
 const description = 'What number is missing in the progression?';
 
-let missingNumber;
-
-const genProgress = (startNum, qnt) => {
-  const diff = genRandInt(1, 10);
-  const positionOfMissingNumber = genRandInt(0, qnt - 1);
+const getProgress = (start, length, diff, missingPosition) => {
+  let missingElement;
   let result = '';
-  for (let i = 0; i < qnt; i += 1) {
-    let nextSymbol = startNum + diff * i;
-    if (i === positionOfMissingNumber) {
-      missingNumber = nextSymbol;
-      nextSymbol = '..';
+  for (let i = 0; i < length; i += 1) {
+    let current = start + diff * i;
+    if (i === missingPosition) {
+      missingElement = current;
+      current = '..';
     }
-    result = `${result} ${nextSymbol}`;
+    result = `${result} ${current}`;
   }
-  return result;
+  return cons(result, missingElement);
 };
 
 const generateQuestionAnswer = () => {
-  const question = genProgress(genRandInt(1, 100), 12);
-  const answer = missingNumber;
-  return cons(question, answer);
+  const length = 12;
+  const start = genRandInt(1, 100);
+  const diffrence = genRandInt(1, 10);
+  const missingPosition = genRandInt(0, length - 1);
+  const progression = getProgress(start, length, diffrence, missingPosition);
+  const question = car(progression);
+  const answer = cdr(progression);
+  return cons(question, String(answer));
 };
 
 export default () => engine(description, generateQuestionAnswer);

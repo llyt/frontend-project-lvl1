@@ -31,7 +31,7 @@ const generateQuestionAnswer = () => {
     default:
       answer = null;
   }
-  return cons(question, answer);
+  return cons(question, String(answer));
 };
 
 export default () => engine(description, generateQuestionAnswer);
