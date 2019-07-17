@@ -3,8 +3,9 @@ import engine from '..';
 import genRandInt from '../randomInt';
 
 const description = 'What number is missing in the progression?';
+const progressionLength = 12;
 
-const getProgress = (start, length, diff, missingPosition) => {
+const getProgressionPair = (start, length, diff, missingPosition) => {
   let missingElement;
   let result = '';
   for (let i = 0; i < length; i += 1) {
@@ -19,11 +20,10 @@ const getProgress = (start, length, diff, missingPosition) => {
 };
 
 const generateQuestionAnswer = () => {
-  const length = 12;
   const start = genRandInt(1, 100);
   const diffrence = genRandInt(1, 10);
-  const missingPosition = genRandInt(0, length - 1);
-  const progression = getProgress(start, length, diffrence, missingPosition);
+  const missingPosition = genRandInt(0, progressionLength - 1);
+  const progression = getProgressionPair(start, progressionLength, diffrence, missingPosition);
   const question = car(progression);
   const answer = cdr(progression);
   return cons(question, String(answer));
